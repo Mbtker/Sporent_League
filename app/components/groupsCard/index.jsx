@@ -189,11 +189,12 @@ function GroupsCard() {
                 <Card
                   title={i.Topic}
                   tableActions={tableActions}
-                  data={
-                    data?.Championship?.filter?.(
-                      (card) => card.Type == "Group"
-                    )[0]?.Teams ?? []
-                  }
+                  data={i.Teams}
+                  // data={
+                  //   data?.Championship?.filter?.(
+                  //     (card) => card.Type == "Group"
+                  //   )[0]?.i.Teams ?? []
+                  // }
                 />
               ) : (
                 <div className="dark:bg-gradient-to-b from-[#2C303C] to-[#1D1E23]  overflow-x-auto border rounded-2xl border-main dark:border-[#4A4E57]">
@@ -258,11 +259,11 @@ function GroupsCard() {
                               className="rounded-full"
                               alt="spornet"
                               fill
-                              src={match?.FirstTeam?.Logo}
+                              src={match?.SecondTeam?.Logo}
                             />
                           </div>
                           <div className="font-[600] text-main dark:text-[#FFFFFF] text-right  min-w-[115px] sm:text-xs text-lg  xl:text-lg lg:min-w-[120px]  xl:min-w-[172px] lg:text-sm ">
-                            {match?.FirstTeam?.Name ?? "-"}
+                            {match?.SecondTeam?.Name ?? "-"}
                           </div>
                         </div>
                         <div className="text-main  text-lg sm:text-xs text-center min-w-fit mx-4 md:text-md  dark:text-[#878A91]">
