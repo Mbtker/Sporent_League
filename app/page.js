@@ -9,11 +9,14 @@ import NavbarAndTeams from "./components/navBarAndTeams";
 import { mutate } from "swr";
 import { db } from "./utilis/firebase";
 import { ref, onValue } from "firebase/database";
+import useSWR from "swr";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  IncrestVistor();
+  
   function isBetween6PMand6AM() {
     // Get the current date and time
     let currentTime = new Date();
@@ -27,6 +30,18 @@ export default function Home() {
     } else {
       return false; // It's not between 6 PM and 6 AM
     }
+  }
+
+  function IncrestVistor() {
+      const fetcher = (...args) =>
+      fetch(...args)
+        .then((res) => res.json())
+        .catch((err) => console.log({ err }));
+    const { data, error, isLoading, mutate } = useSWR(
+      "https://www.sporent.net/IncreaseVisitor",
+      fetcher,
+      { fallback: false, revalidateOnFocus: false, keepPreviousData: true }
+    );
   }
 
   // Call the function and store the result
