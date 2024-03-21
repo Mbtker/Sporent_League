@@ -65,7 +65,7 @@ function PreviousMatches({ otherMatchesData }) {
                 <div className="m:w-fit min-h-[54px] w-full flex-col justify-center items-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
                   <div className="font-[600] m:w-fit w-full justify-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
                     <div>{match?.FirstTeam?.Gol ?? "-"}</div>
-                    <div>:</div>
+                    <div> - </div>
                     <div>{match?.SecondTeam?.Gol ?? "-"}</div>
                   </div>
                   {match?.FirstTeam?.PenaltyShootoutsGoal > 0 && (
@@ -73,7 +73,7 @@ function PreviousMatches({ otherMatchesData }) {
                       <div>
                         ({match?.FirstTeam?.PenaltyShootoutsGoal ?? "-"}
                       </div>
-                      <div>:</div>
+                      <div> - </div>
                       <div>
                         {match?.SecondTeam?.PenaltyShootoutsGoal ?? "-"})
                       </div>
@@ -134,7 +134,7 @@ function PreviousMatches({ otherMatchesData }) {
                 <div className="m:w-fit min-h-[54px] w-full flex-col justify-center items-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
                   <div className="font-[600] m:w-fit w-full justify-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
                     <div>{match?.FirstTeam?.Gol ?? "-"}</div>
-                    <div>:</div>
+                    <div> - </div>
                     <div>{match?.SecondTeam?.Gol ?? "-"}</div>
                   </div>
                   {match?.FirstTeam?.PenaltyShootoutsGoal > 0 && (
@@ -142,7 +142,7 @@ function PreviousMatches({ otherMatchesData }) {
                       <div>
                         ({match?.FirstTeam?.PenaltyShootoutsGoal ?? "-"}
                       </div>
-                      <div>:</div>
+                      <div> - </div>
                       <div>
                         {match?.SecondTeam?.PenaltyShootoutsGoal ?? "-"})
                       </div>
