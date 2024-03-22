@@ -79,7 +79,7 @@ function Matches() {
                   <div className="m:w-fit min-h-[54px] w-full flex-col justify-center items-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
                     <div className="text-xl flex gap-0.5 min-w-fit font-[800] text-main mt-11 dark:text-[#FFFFFF]">
                       <div>{currentMatchData?.FirstTeam?.Gol ?? "-"}</div>
-                      <div>:</div>
+                      <div>-</div>
                       <div>{currentMatchData?.SecondTeam?.Gol ?? "-"}</div>
                     </div>
                     {currentMatchData?.FirstTeam?.PenaltyShootoutsGoal > 0 && (
@@ -89,7 +89,7 @@ function Matches() {
                           {currentMatchData?.FirstTeam?.PenaltyShootoutsGoal ??
                             ""}
                         </div>
-                        <div>:</div>
+                        <div>-</div>
                         <div>
                           {currentMatchData?.SecondTeam?.PenaltyShootoutsGoal ??
                             ""}
