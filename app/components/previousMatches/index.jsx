@@ -32,7 +32,7 @@ function PreviousMatches({ otherMatchesData }) {
     return char;
   }
 
-  return (
+ return (
     <div className="mt-5 ">
       <div className="md:hidden">
         <Slider {...settings}>
@@ -51,31 +51,31 @@ function PreviousMatches({ otherMatchesData }) {
               <div className="flex items-center justify-center">
                 <div className="flex flex-col-reverse items-center justify-center w-full gap-2 sm:w-fit sm:flex-row">
                   <div className="font-[600] dark:text-[#FFFFFF] text-center min-w-[115px] text-xs   ">
-                    {match?.FirstTeam?.Name ?? "-"}
+                    {match?.SecondTeam?.Name ?? "-"}
                   </div>
                   <div className="relative    w-[70px] h-[70px] ">
                     <Image
                       className="rounded-full"
                       alt="spornet"
                       fill
-                      src={match?.FirstTeam?.Logo}
+                      src={match?.SecondTeam?.Logo}
                     />
                   </div>
                 </div>
                 <div className="m:w-fit min-h-[54px] w-full flex-col justify-center items-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
                   <div className="font-[600] m:w-fit w-full justify-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
-                    <div>{match?.FirstTeam?.Gol ?? "-"}</div>
-                    <div> - </div>
                     <div>{match?.SecondTeam?.Gol ?? "-"}</div>
+                    <div> - </div>
+                    <div>{match?.FirstTeam?.Gol ?? "-"}</div>
                   </div>
-                  {match?.FirstTeam?.PenaltyShootoutsGoal > 0 && (
+                  {match?.SecondTeam?.PenaltyShootoutsGoal > 0 && (
                     <div className="font-[600] m:w-fit w-full justify-center text-sm text-main dark:text-[#3F8CAA] flex gap-0.5">
                       <div>
-                        ({match?.FirstTeam?.PenaltyShootoutsGoal ?? "-"}
+                        ({match?.SecondTeam?.PenaltyShootoutsGoal ?? "-"}
                       </div>
                       <div> - </div>
                       <div>
-                        {match?.SecondTeam?.PenaltyShootoutsGoal ?? "-"})
+                        {match?.FirstTeam?.PenaltyShootoutsGoal ?? "-"})
                       </div>
                     </div>
                   )}
@@ -86,11 +86,11 @@ function PreviousMatches({ otherMatchesData }) {
                       className="rounded-full"
                       alt="spornet"
                       fill
-                      src={match?.SecondTeam?.Logo}
+                      src={match?.FirstTeam?.Logo}
                     />
                   </div>
                   <div className="font-[600] dark:text-[#FFFFFF] text-center min-w-[115px] text-xs   ">
-                    {match?.SecondTeam?.Name ?? "-"}
+                    {match?.FirstTeam?.Name ?? "-"}
                   </div>
                 </div>
               </div>
@@ -120,31 +120,31 @@ function PreviousMatches({ otherMatchesData }) {
                 </div>
                 <div className="flex flex-col-reverse items-center justify-center w-full gap-2 sm:w-fit sm:flex-row">
                   <div className="font-[600] dark:text-[#FFFFFF] text-center min-w-[115px] sm:text-xs text-lg  md:min-w-[172px] md:text-lg ">
-                    {match?.FirstTeam?.Name ?? "-"}
+                    {match?.SecondTeam?.Name ?? "-"}
                   </div>
                   <div className="relative   md:w-[40px] md:h-[40px] w-[40px] h-[40px] sm:w-[20px] sm:h-[20px]">
                     <Image
                       className="rounded-full"
                       alt="spornet"
                       fill
-                      src={match?.FirstTeam?.Logo}
+                      src={match?.SecondTeam?.Logo}
                     />
                   </div>
                 </div>
                 <div className="m:w-fit min-h-[54px] w-full flex-col justify-center items-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
                   <div className="font-[600] m:w-fit w-full justify-center text-2xl dark:text-[#FFFFFF] flex gap-0.5">
-                    <div>{match?.FirstTeam?.Gol ?? "-"}</div>
-                    <div> - </div>
                     <div>{match?.SecondTeam?.Gol ?? "-"}</div>
+                    <div> - </div>
+                    <div>{match?.FirstTeam?.Gol ?? "-"}</div>
                   </div>
-                  {match?.FirstTeam?.PenaltyShootoutsGoal > 0 && (
+                  {match?.SecondTeam?.PenaltyShootoutsGoal > 0 && (
                     <div className="font-[600] m:w-fit w-full justify-center text-sm text-main dark:text-[#3F8CAA] flex gap-0.5">
                       <div>
-                        ({match?.FirstTeam?.PenaltyShootoutsGoal ?? "-"}
+                        ({match?.SecondTeam?.PenaltyShootoutsGoal ?? "-"}
                       </div>
                       <div> - </div>
                       <div>
-                        {match?.SecondTeam?.PenaltyShootoutsGoal ?? "-"})
+                        {match?.FirstTeam?.PenaltyShootoutsGoal ?? "-"})
                       </div>
                     </div>
                   )}
@@ -155,11 +155,11 @@ function PreviousMatches({ otherMatchesData }) {
                       className="rounded-full"
                       alt="spornet"
                       fill
-                      src={match?.SecondTeam?.Logo}
+                      src={match?.FirstTeam?.Logo}
                     />
                   </div>
                   <div className="font-[600] text-center dark:text-[#FFFFFF] text-lg sm:text-xs md:text-lg min-w-[115px] md:min-w-[172px]">
-                    {match?.SecondTeam?.Name ?? "-"}
+                    {match?.FirstTeam?.Name ?? "-"}
                   </div>
                 </div>
                 {match?.MatchDate?.Time && (
